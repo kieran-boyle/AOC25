@@ -1,3 +1,4 @@
+import os
 import json
 
 dial = range(100)
@@ -25,7 +26,7 @@ def move_dial(direction, steps):
     if position == 0:
         count += 1
     
-with open('input.json') as f:
+with open(os.path.join(os.path.dirname(__file__), 'input.json'), 'r', encoding='utf-8') as f:
     data = json.load(f)
     
     for move in data:
