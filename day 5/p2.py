@@ -10,6 +10,14 @@ def build_ranges(ranges):
 
     return new_data
 
+def check_range(target, each_range):
+    
+    if each_range[0] <= target <= each_range[1]:
+        
+        return True
+    
+    return False
+
 with open(os.path.join(os.path.dirname(__file__), 'test.json'), 'r', encoding='utf-8') as f:
     data = json.load(f)
     ranges = data[0]
