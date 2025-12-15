@@ -16,7 +16,7 @@ def parse_input(data):
             buttons[i] = list(map(int, button))
             
         this_data.append(buttons)
-        requirements = list(map(int, split_line[-1][:-2].replace('{', '').replace('}', '').replace('"','').split(',')))
+        requirements = list(map(int, split_line[-1][:-2].replace('{', '').replace('}', '').split(',')))
         this_data.append(requirements)
         results.append(this_data)
     
@@ -27,4 +27,4 @@ with open(os.path.join(os.path.dirname(__file__), 'test.json'), 'r', encoding='u
     
     for line in data:
         diagram, buttons, requirements = line
-        print(diagram)
+        print(requirements)
